@@ -2,11 +2,23 @@
 
 namespace LAB02_UnitTesting
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static double balance = 300.00;
+
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Balance(balance);
+        }
+
+        public static void Balance(double balance)
+        {
+            Console.WriteLine($"Your current balance is {balance}");
+        }
+
+        public static double Withdraw(double amount)
+        {
+            return balance -= amount;
         }
     }
 }
