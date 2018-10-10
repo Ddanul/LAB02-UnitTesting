@@ -9,6 +9,7 @@ namespace LAB02_UnitTesting
         public static void Main(string[] args)
         {
             Balance(balance);
+            Console.WriteLine(Withdraw(5.00));
         }
 
         public static void Balance(double balance)

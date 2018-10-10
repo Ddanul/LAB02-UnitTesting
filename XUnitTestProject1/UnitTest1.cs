@@ -12,7 +12,7 @@ namespace XUnitTestProject1
             //arrange
             //act
             //assert
-            Assert.Equal("395.00", Program.Withdraw(5.00));
+            Assert.Equal(295.00, Program.Withdraw(5.00));
         }
     }
 }
