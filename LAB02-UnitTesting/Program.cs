@@ -8,6 +8,7 @@ namespace LAB02_UnitTesting
 
         public static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to the ATM");
             bool exit = false;
             while (!exit)
             {
@@ -21,10 +22,10 @@ namespace LAB02_UnitTesting
                         continue;
                     case 2:
                         
-                        Withdraw(AskAmount());
+                        Console.WriteLine($"Your balance is now: ${Withdraw(AskAmount())}");
                         continue;
                     case 3:
-                        Deposit(AskAmount());
+                        Console.WriteLine($"Your balance is now: ${Deposit(AskAmount())}");
                         continue;
                     case 4:
                         exit = true;
@@ -58,7 +59,7 @@ namespace LAB02_UnitTesting
 
         public static void Balance()
         {
-            Console.WriteLine($"Your current balance is {balance}");
+            Console.WriteLine($"Your current balance is ${balance}");
         }
 
         public static double Withdraw(double amount)
