@@ -21,7 +21,6 @@ namespace LAB02_UnitTesting
                         Balance();
                         continue;
                     case 2:
-                        
                         Console.WriteLine($"Your balance is now: ${Withdraw(AskAmount())}");
                         continue;
                     case 3:
