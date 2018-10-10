@@ -8,10 +8,39 @@ namespace LAB02_UnitTesting
 
         public static void Main(string[] args)
         {
-            
+            bool exit = false;
+            while (!exit)
+            {
+                Console.WriteLine("[1] Balance; [2] Withdraw; [3] Deposit; [4] Exit");
+                int action = Convert.ToInt16(Console.ReadLine());
+                switch (action)
+                {
+                    case 1:
+                        Balance();
+                        continue;
+                    case 2:
+                        Withdraw(AskAmount());
+                        continue;
+                    case 3:
+                        Deposit(AskAmount());
+                        continue;
+                    case 4:
+                        exit = true;
+                        continue;
+                    default:
+                        Console.WriteLine("Not an option!");
+                        continue;
+                }
+            }
         }
 
-        public static void Balance(double balance)
+        public static double AskAmount()
+        {
+            Console.Write("Please enter amount desired: ");
+            return Convert.ToDouble(Console.ReadLine());
+        }
+
+        public static void Balance()
         {
             Console.WriteLine($"Your current balance is {balance}");
         }
