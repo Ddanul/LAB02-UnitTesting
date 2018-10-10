@@ -8,8 +8,7 @@ namespace LAB02_UnitTesting
 
         public static void Main(string[] args)
         {
-            Balance(balance);
-            Console.WriteLine(Withdraw(5.00));
+            
         }
 
         public static void Balance(double balance)
@@ -19,7 +18,14 @@ namespace LAB02_UnitTesting
 
         public static double Withdraw(double amount)
         {
-            return balance -= amount;
+            if (amount > balance)
+            {
+                return balance;
+            }
+            else
+            {
+                return balance -= amount;
+            }
         }
     }
 }

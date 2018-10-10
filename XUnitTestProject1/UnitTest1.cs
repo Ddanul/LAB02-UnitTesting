@@ -7,6 +7,18 @@ namespace XUnitTestProject1
     public class UnitTest1
     {
         [Fact]
+        public void CanWithdrawMoreThanBalance()
+        {
+            //arrange
+            //act
+            //assert
+            Assert.Equal(300, Program.Withdraw(301));
+        }
+    }
+
+    public class UnitTest2
+    {
+        [Fact]
         public void CanWithdraw5Dollars()
         {
             //arrange
