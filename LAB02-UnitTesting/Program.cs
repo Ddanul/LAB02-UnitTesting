@@ -27,5 +27,17 @@ namespace LAB02_UnitTesting
                 return balance -= amount;
             }
         }
+
+        public static double Deposit(double amount)
+        {
+            if(amount < 0)
+            {
+                return balance;
+            }
+            else
+            {
+                return balance += amount;
+            }
+        }
     }
 }
